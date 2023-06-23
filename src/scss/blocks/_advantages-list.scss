@@ -1,0 +1,97 @@
+.advantages-list {
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 1px;
+    background-color: #e8e8eb;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 8px;
+    bottom: 8px;
+    width: 1px;
+    background-color: #e8e8eb;
+  }
+
+  .row {
+    & > div {
+      padding-bottom: 5px;
+    }
+  }
+
+  .text {
+    height: 148px;
+    padding: 7px 0 0 5px;
+  }
+
+  .number {
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 48px;
+    margin: 0 0 10px;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid #e8e8eb;
+
+    li {
+      padding: 10px 0 9.5px;
+      border-bottom: 1px solid #e8e8eb;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    &:after {
+      display: none;
+    }
+
+    .row {
+      & > div {
+        &:not(:last-child) {
+          border-right: 1px solid #e8e8eb;
+        }
+      }
+    }
+
+    ul {
+      border: none;
+
+      li {
+        border-top: 1px solid #e8e8eb;
+        border-bottom: none;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(xxl) {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    .text {
+      height: 340px;
+      padding: 0;
+    }
+
+    .number {
+      font-size: 60px;
+      line-height: 62px;
+      margin: 0 0 18px;
+    }
+
+    ul {
+      li {
+        padding: 12px 0;
+      }
+    }
+  }
+}

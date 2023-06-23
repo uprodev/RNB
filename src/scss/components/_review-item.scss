@@ -1,0 +1,89 @@
+.review-item {
+  border-top: 1px solid #e8e8eb;
+  padding: 0 0 49px;
+
+  &:last-child {
+    padding-bottom: 12px;
+  }
+
+  p {
+    font-size: 12px;
+    line-height: 14px;
+    margin: 0 0 20px;
+  }
+
+  .text {
+    border-bottom: 1px solid #e8e8eb;
+    padding: 11px 0 28px;
+    margin: 0 0 11px;
+
+    p {
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+
+  .author {
+    padding: 6px 0 0;
+
+    figure {
+      margin: 0;
+      width: 36px;
+      height: 36px;
+
+      img {
+        @include img-fit;
+        border-radius: 100%;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding: 12px 0 50px;
+
+    &:last-child {
+      padding-bottom: 50px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 17px;
+      margin: 0;
+    }
+
+    .text {
+      border-bottom: none;
+      padding: 0;
+      margin: 0;
+
+      p {
+        font-size: 18px;
+        line-height: 22px;
+        margin: 0 0 25px;
+      }
+    }
+
+    .author {
+      padding: 0;
+
+      figure {
+        margin: 30px 0 0;
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    &:last-child {
+      margin: 0 0 67px;
+    }
+    .text {
+      p {
+        font-size: 22px;
+        line-height: 26px;
+        margin: 0 0 30px;
+      }
+    }
+  }
+}

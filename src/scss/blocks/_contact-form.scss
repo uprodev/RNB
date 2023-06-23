@@ -1,0 +1,151 @@
+.contact-form {
+  background-color: $blue3;
+  padding: 14px 0 22px;
+  color: $darkblue1;
+
+  .text {
+    margin: 0 0 100px;
+    max-width: 515px;
+
+    .form-sticker {
+      display: none;
+    }
+  }
+
+  .title {
+    color: rgba(0, 43, 107, 0.6);
+    font-size: 12px;
+    margin: 0 0 30px;
+  }
+
+  form {
+    .row {
+      --bs-gutter-x: 12px;
+    }
+  }
+
+  .field {
+    margin: 0 0 12px;
+
+    textarea {
+      resize: none;
+      height: 106px;
+    }
+  }
+
+  .submit {
+    .btn-arrow-blue {
+      background: #ebeff5;
+      color: $darkblue1;
+    }
+
+    .info {
+      margin: 22px 0 0;
+      display: flex;
+      align-items: center;
+      color: $darkblue2;
+      font-size: 12px;
+      line-height: 16px;
+      max-width: 302px;
+
+      .icon {
+        flex: 0 0 auto;
+        margin: 0 20px 0 0;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    padding: 15px 0;
+
+    .text {
+      margin: 0;
+      height: 100%;
+      position: relative;
+
+      .form-sticker {
+        display: block;
+        position: absolute;
+        left: 0px;
+        bottom: 10px;
+        color: $darkblue3;
+        font-size: 16px;
+        text-transform: capitalize;
+      }
+    }
+
+    & > .row {
+      & > div {
+        &:first-child {
+          border-right: 1px solid rgba($darkblue1, 0.1);
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    .text {
+      padding: 24px 0 0;
+    }
+
+    .title {
+      color: $darkblue1;
+      font-size: 24px;
+      line-height: 30px;
+      margin: 0 0 44px;
+    }
+
+    .form {
+      padding: 24px 0 50px;
+    }
+
+    .field {
+      margin: 0 0 12px;
+
+      .form-control {
+        font-size: $input-font-size-lg;
+        padding: $input-padding-y-lg $input-padding-x-lg;
+      }
+      .form-select {
+        font-size: $input-font-size-lg;
+        padding: 1.2rem 3rem 1.2rem 1.2rem;
+        background-size: $form-select-bg-size-lg;
+      }
+
+      textarea {
+        height: 137px;
+      }
+    }
+
+    .submit {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+      padding: 8px 0 0;
+
+      .btn-arrow-blue {
+        background: #ebeff5;
+        color: $darkblue1;
+        margin-left: 20px;
+      }
+
+      .info {
+        margin: 0;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(xxl) {
+    .form {
+      padding-bottom: 232px;
+    }
+    .submit {
+      .btn-arrow-blue {
+        width: calc(50% - 16px);
+        justify-content: space-between;
+        padding: 0 25px;
+      }
+    }
+  }
+}

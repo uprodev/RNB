@@ -1,0 +1,72 @@
+.card {
+  position: relative;
+  padding: 93.3% 0 0;
+  overflow: hidden;
+
+  .card-img {
+    @include abs;
+    background: #c8c8c8;
+
+    &:after {
+      content: "";
+      @include abs;
+      background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 71.35%);
+      opacity: 0.55;
+    }
+
+    img {
+      @include img-fit;
+    }
+  }
+
+  .card-text {
+    position: absolute;
+    left: 72px;
+    bottom: 104px;
+    max-width: 710px;
+    padding: 0 70px 0 0;
+
+    h2 {
+      margin: 0 0 24px;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  @include media-breakpoint-down(xl) {
+    .card-text {
+      left: 32px;
+      bottom: 72px;
+      padding: 0 32px 0 0;
+
+      h2 {
+        font-size: 40px;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    .card-text {
+      h2 {
+        font-size: 32px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    padding: 0;
+    height: 100vh;
+
+    .card-text {
+      left: 24px;
+      right: 24px;
+      padding: 0;
+    }
+  }
+}

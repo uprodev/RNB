@@ -1,0 +1,53 @@
+.content-nav {
+  padding: 10px;
+  overflow: auto;
+
+  ul {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      margin: 0 10px 0 0;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      padding: 0 8px;
+      border: 1px solid #e0e0e1;
+      border-radius: 2px;
+      height: 29px;
+      font-size: 14px;
+      line-height: 17px;
+      text-transform: capitalize;
+      color: $black;
+      white-space: nowrap;
+
+      &:hover {
+        background-color: $gray3;
+        border-color: $gray3;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    padding: 11px 40px 12px;
+
+    ul {
+      display: inline-flex;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        margin: 0 10.5px 0 0;
+      }
+
+      a {
+        padding: 1px 10px;
+      }
+    }
+  }
+}

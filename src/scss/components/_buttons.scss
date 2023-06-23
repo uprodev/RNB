@@ -1,0 +1,336 @@
+@charset "UTF-8";
+
+a,
+button {
+  transition: $btn-transition;
+  -webkit-appearance: none;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: none !important;
+    box-shadow: none;
+  }
+}
+
+.btn {
+  width: auto;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  border: none;
+  border-radius: 30px;
+  padding: 0 18px;
+  white-space: nowrap;
+  text-align: center;
+
+  &.btn-red {
+    background-color: $red1;
+    color: $white;
+
+    &:hover {
+      background-color: $red1;
+      color: $white;
+    }
+
+    &:active {
+      background-color: $red1;
+      color: $white;
+    }
+  }
+
+  &.btn-arrow-red {
+    height: 50px;
+    background-color: $gray3;
+    border-radius: 2px;
+    color: $black;
+    font-size: 14px;
+    line-height: 17px;
+    padding: 0 18px;
+    position: relative;
+
+    &:before {
+      content: "";
+      width: 1px;
+      height: 9px;
+      background-color: rgba($black, 0.1);
+      transition: $btn-transition;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 54px;
+    }
+
+    .icon {
+      width: 18px;
+      height: 18px;
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: $btn-transition;
+      background-color: $red1;
+      margin-left: 40px;
+
+      svg {
+        display: block;
+        width: 4px;
+        height: 6px;
+
+        path {
+          stroke: $gray3;
+          transition: $btn-transition;
+        }
+      }
+    }
+
+    &:hover,
+    &.active {
+      background-color: $red1;
+      color: $white;
+
+      &:before {
+        background-color: rgba($white, 0.33);
+      }
+
+      .icon {
+        background-color: $white;
+
+        svg {
+          path {
+            stroke: $red1;
+          }
+        }
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      height: 60px;
+      padding: 0 25px;
+      font-size: 16px;
+      line-height: 19px;
+
+      .icon {
+        width: 24px;
+        height: 24px;
+        margin-left: 50px;
+
+        svg {
+          width: 5px;
+          height: 8px;
+        }
+      }
+    }
+  }
+
+  &.btn-arrow-blue {
+    height: 50px;
+    background-color: $gray3;
+    border-radius: 2px;
+    color: $black;
+    font-size: 14px;
+    line-height: 17px;
+    padding: 0 18px;
+    position: relative;
+
+    &:before {
+      content: "";
+      width: 1px;
+      height: 9px;
+      background-color: rgba($black, 0.1);
+      transition: $btn-transition;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 54px;
+    }
+
+    .icon {
+      width: 18px;
+      height: 18px;
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: $btn-transition;
+      background-color: $blue1;
+      margin-left: 40px;
+
+      svg {
+        display: block;
+        width: 4px;
+        height: 6px;
+
+        path {
+          stroke: $gray3;
+          transition: $btn-transition;
+        }
+      }
+    }
+
+    &:hover,
+    &.active {
+      background-color: $blue1;
+      color: $white;
+
+      &:before {
+        background-color: rgba($white, 0.33);
+      }
+
+      .icon {
+        background-color: $white;
+
+        svg {
+          path {
+            stroke: $blue1;
+          }
+        }
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      height: 60px;
+      padding: 0 25px;
+      font-size: 16px;
+      line-height: 19px;
+
+      .icon {
+        width: 24px;
+        height: 24px;
+        margin-left: 50px;
+
+        svg {
+          width: 5px;
+          height: 8px;
+        }
+      }
+    }
+  }
+
+  &.btn-arrow {
+    height: 50px;
+    background-color: $gray3;
+    border-radius: 2px;
+    color: $black;
+    font-size: 14px;
+    line-height: 17px;
+    padding: 0 18px;
+    position: relative;
+
+    &:before {
+      content: "";
+      width: 1px;
+      height: 9px;
+      background-color: rgba($black, 0.1);
+      transition: $btn-transition;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 39px;
+    }
+
+    .icon {
+      margin-left: 40px;
+
+      svg {
+        display: block;
+        width: 4px;
+        height: 6px;
+
+        path {
+          stroke: $black;
+        }
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      height: 40px;
+      padding: 0 20px;
+      font-size: 16px;
+      line-height: 19px;
+
+      .icon {
+        svg {
+          width: 5px;
+          height: 8px;
+        }
+      }
+    }
+  }
+
+  &.btn-outline {
+    height: 49px;
+    border: 1px solid #dcdcde;
+    border-radius: 2px;
+    color: $black;
+    font-size: 14px;
+    line-height: 17px;
+
+    &:hover {
+      background-color: $gray3;
+      border-color: $gray3;
+    }
+
+    @include media-breakpoint-up(lg) {
+      font-size: 16px;
+    }
+  }
+}
+
+.link-arrow {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: $text2;
+
+  .icon {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 16px;
+    margin-top: 3px;
+    border-radius: 100%;
+    background: $gray3;
+
+    svg {
+      display: block;
+      width: 4px;
+      height: 6px;
+
+      path {
+        stroke: $black;
+      }
+    }
+  }
+
+  &:hover {
+    color: inherit;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 16px;
+    line-height: 20px;
+
+    .icon {
+      width: 24px;
+      height: 24px;
+
+      svg {
+        width: 5px;
+        height: 8px;
+      }
+    }
+  }
+}

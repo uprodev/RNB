@@ -1,0 +1,46 @@
+.block-title {
+  display: inline-flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 19px;
+  position: relative;
+  background-color: #e8e8eb;
+  border-radius: 30px;
+  padding: 8px 20px 8px 8px;
+
+  span {
+    width: 28px;
+    height: 28px;
+    background: $blue3;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 14px 0 0;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .block-title-amount {
+    position: absolute;
+    top: 0;
+    left: calc(100% + 10px);
+    font-size: 14px;
+    line-height: 17px;
+    color: $text3;
+  }
+
+  @include media-breakpoint-up(md) {
+    background: #e8e8eb;
+    border-radius: 30px;
+    padding: 8.5px 20px 8.5px 8px;
+    font-size: 24px;
+    line-height: 30px;
+
+    span {
+      width: 29px;
+      height: 29px;
+      margin: 0 12px 0 0;
+    }
+  }
+}

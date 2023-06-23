@@ -1,0 +1,87 @@
+body {
+  color: $text-main;
+  font-family: $font-family-base;
+  font-weight: 400;
+  @extend .font-1;
+}
+
+input,
+select,
+textarea,
+button {
+  font-family: $font-family-base;
+}
+
+p,
+ol,
+ul,
+dl {
+  margin: 0;
+}
+
+.font-1 {
+  font-size: 12px;
+  line-height: 14px;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  @include media-breakpoint-up(xxl) {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+.font-2 {
+  font-size: 12px;
+  line-height: 16px;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  @include media-breakpoint-up(xxl) {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+
+.font-3 {
+  font-size: 16px;
+  line-height: 19px;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  @include media-breakpoint-up(xxl) {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+
+.font-4 {
+  font-size: 16px;
+  line-height: 19px;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 22px;
+    line-height: 28px;
+  }
+  @include media-breakpoint-up(xxl) {
+    font-size: 28px;
+    line-height: 33px;
+  }
+}
+
+h5 {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
