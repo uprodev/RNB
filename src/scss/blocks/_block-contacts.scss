@@ -1,0 +1,242 @@
+.block-contacts {
+  margin: 100px 0 0;
+  padding: 14px 0 0;
+
+  .container-fluid > .row {
+    &:nth-child(2) {
+      @extend .border-top;
+    }
+  }
+
+  .contacts-intro {
+    padding: 0 20px 0 0;
+    margin: 0 0 100px;
+    font-size: 16px;
+    line-height: 1.2;
+
+    p {
+      margin: 30px 0 0;
+    }
+  }
+
+  .contact-form {
+    background-color: transparent;
+    padding: 0 0 14px;
+
+    .form {
+      padding: 0 !important;
+    }
+
+    .form-control {
+      background-color: #f7f8fa;
+    }
+
+    .submit {
+      padding: 88px 0 0;
+
+      .btn {
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .info {
+        margin: 20px 0 0;
+        color: $text1;
+        max-width: 240px;
+      }
+    }
+  }
+
+  .contacts-info {
+    .row {
+      & > div {
+        &:last-child {
+          .item {
+            @extend .border-top;
+            height: 151px;
+          }
+        }
+      }
+    }
+
+    .item {
+      padding: 14px 0;
+      height: 202px;
+      font-weight: 400;
+
+      .title {
+        color: rgba(0, 0, 0, 0.6);
+        margin: 0 0 22px;
+      }
+      p {
+        margin: 0;
+        font-size: 16px;
+        line-height: 1.2;
+      }
+    }
+
+    .sticker {
+      display: none;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    .contact-form {
+      .submit {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        padding: 8px 0 0;
+
+        .btn {
+          width: 50%;
+        }
+
+        .info {
+          margin: 0;
+        }
+      }
+    }
+
+    .contacts-info {
+      .row {
+        & > div {
+          &:last-child {
+            border-left: 1px solid $border;
+            .item {
+              border: none !important;
+              height: 200px;
+            }
+          }
+        }
+      }
+
+      .item {
+        padding: 10px 0;
+        height: 200px;
+
+        .title {
+          color: $text-main;
+          padding: 0 0 20px;
+          font-size: 18px;
+          line-height: 22px;
+          border-bottom: 1px solid $border;
+          margin: 0 0 20px;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .container-fluid > .row {
+      & > div {
+        &:last-child {
+          border-left: 1px solid $border;
+        }
+      }
+
+      &:nth-child(2) {
+        border: none !important;
+      }
+    }
+
+    .contact-form {
+      padding: 0 0 60px;
+
+      .submit {
+        .btn {
+          width: 60%;
+          max-width: 437px;
+        }
+      }
+    }
+
+    .contacts-info {
+      border-top: 1px solid $border;
+      padding: 12px 0;
+      height: 100%;
+      position: relative;
+
+      .row {
+        height: 100%;
+        & > div {
+          &:last-child {
+            .item {
+              height: auto;
+            }
+          }
+        }
+      }
+
+      .item {
+        height: auto;
+
+        .title {
+          color: $text-main;
+          padding: 0 0 20px;
+          font-size: 20px;
+          line-height: 30px;
+          border-bottom: 1px solid $border;
+          margin: 0 0 20px;
+        }
+      }
+
+      .sticker {
+        position: absolute;
+        display: block;
+        left: 12px;
+        bottom: 30px;
+        font-size: 16px;
+        line-height: 19px;
+      }
+    }
+
+    .contacts-image {
+      margin: 0;
+      padding: 0 0 27px;
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    margin: 145px 0 0;
+
+    .contacts-intro {
+      padding: 26px 0 0;
+      font-size: 24px;
+      line-height: 30px;
+
+      p {
+        margin: 44px 0 0;
+        color: $text1;
+        max-width: 515px;
+      }
+    }
+
+    .contact-form {
+      padding: 24px 0 63px;
+    }
+
+    .contacts-info {
+      padding: 12px;
+      .item {
+        .title {
+          padding: 0 0 20px;
+          font-size: 24px;
+          line-height: 30px;
+        }
+
+        p {
+          font-size: 20px;
+          line-height: 1.2;
+          color: $text1;
+        }
+      }
+    }
+  }
+}

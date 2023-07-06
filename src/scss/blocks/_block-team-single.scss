@@ -1,0 +1,296 @@
+.block-team-single {
+  .container-fluid {
+    padding: 0;
+    & > div {
+      padding-left: 12px !important;
+      padding-right: 12px !important;
+
+      @include media-breakpoint-up(xl) {
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+      }
+    }
+  }
+}
+
+.block-team-single-intro {
+  border-top: 1px solid $border;
+  padding: 12px 0 60px;
+
+  .block-title {
+    margin: 0 0 20px;
+  }
+
+  .images {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 26px;
+
+    span {
+      display: block;
+      width: 50px;
+      height: 50px;
+      margin: 0 12px 12px 0;
+    }
+
+    img {
+      @include img-fit;
+      border-radius: 100%;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    flex-wrap: wrap;
+
+    .btn {
+      margin: 0 20px 8px 0;
+
+      @media (min-width: 400px) {
+        margin-right: 8px;
+      }
+    }
+  }
+
+  .font-5 {
+    margin-top: 92px;
+  }
+
+  p {
+    margin: 0 0 20px;
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  .box-border {
+    margin: 20px 0 28px;
+  }
+}
+
+.block-team-single-members {
+  border-top: 1px solid $border;
+  padding: 12px 0;
+
+  .block-title {
+    margin: 0 0 100px;
+  }
+
+  .row {
+    --bs-gutter-x: 14px;
+    --bs-gutter-y: 24px;
+  }
+}
+
+.block-team-single-list {
+  border-top: 1px solid $border;
+  padding: 12px 0 60px;
+
+  .block-title {
+    margin: 0 0 100px;
+  }
+}
+
+.block-team-single-services {
+  padding: 12px;
+
+  .block-title {
+    margin: 0 0 100px;
+  }
+
+  .row {
+    --bs-gutter-x: 10px;
+    --bs-gutter-y: 12px;
+  }
+
+  .item {
+    border: 1px solid;
+    padding: 20px;
+    transition: all 0.2s;
+
+    .title {
+      font-size: 16px;
+      font-weight: 500;
+      text-transform: capitalize;
+      line-height: normal;
+      margin: 0 0 20px;
+    }
+
+    p {
+      margin: 0 0 40px;
+    }
+  }
+
+  &--red {
+    border-top: 1px solid $red4;
+    background: $red3;
+
+    .item {
+      border-color: $red4;
+      color: $darkred1;
+
+      &:hover {
+        background-color: #f2e9eb;
+      }
+
+      .link-arrow {
+        color: $darkred1;
+        .icon {
+          background: $darkred1;
+
+          svg path {
+            stroke: $white;
+          }
+        }
+      }
+    }
+  }
+
+  &--blue {
+    border-top: 1px solid $blue6;
+    background: $blue5;
+
+    .item {
+      border-color: $blue6;
+      color: $darkblue1;
+
+      &:hover {
+        background-color: #dee3ec;
+      }
+
+      .link-arrow {
+        color: $darkblue1;
+        .icon {
+          background: $darkblue1;
+
+          svg path {
+            stroke: $white;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .block-team-single-intro {
+    .font-5 {
+      margin-top: 0;
+    }
+  }
+
+  .block-team-single-services {
+    .block-title {
+      margin: 0 0 60px;
+    }
+
+    .item {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 20px 20px 27px;
+
+      .title {
+        height: 71px;
+        overflow: hidden;
+        margin: 0;
+      }
+
+      p {
+        margin: 0 0 31px;
+      }
+
+      .link-arrow {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .block-title {
+    margin: 0 0 20px;
+  }
+
+  .block-team-single-intro {
+    padding: 40px 0 185px;
+
+    .buttons {
+      .btn {
+        margin: 0 12px 12px 0;
+      }
+    }
+
+    p {
+      margin: 0 0 25px;
+      &:last-child {
+        margin: 0;
+      }
+    }
+
+    .box-border {
+      margin: 35px 0 47px;
+    }
+  }
+
+  .block-team-single-members {
+    padding: 39px 0 150px;
+
+    .block-title {
+      margin: 0 0 60px;
+    }
+
+    .team-member {
+      figure {
+        padding-top: 95.36%;
+      }
+    }
+  }
+
+  .block-team-single-list {
+    padding: 40px 0 160px;
+
+    &:last-child {
+      padding-bottom: 138px;
+    }
+
+    .block-title {
+      margin: 0;
+    }
+  }
+
+  .block-team-single-services {
+    padding: 40px 0;
+    margin: -25px 0 160px;
+
+    .block-title {
+      margin: 0 0 58px;
+    }
+
+    .item {
+      .title {
+        font-size: 20px;
+        line-height: 26px;
+        font-weight: 400;
+      }
+
+      .link-arrow {
+        margin-top: auto;
+      }
+    }
+
+    &--red {
+      border-bottom: 1px solid $red4;
+    }
+
+    &--blue {
+      border-bottom: 1px solid $blue6;
+    }
+  }
+}
+
+@include media-breakpoint-up(xxl) {
+  .block-team-single-members {
+    min-height: 1098px;
+  }
+}

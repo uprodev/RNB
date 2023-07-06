@@ -1,13 +1,13 @@
 .clients-list {
   overflow: auto;
-  border: 1px solid #e8e8eb;
+  border: 1px solid $border;
   border-width: 1px 0;
   padding: 8px 0;
   margin: 0 -12px;
 
   .item {
     width: 240px;
-    border-right: 1px solid #e8e8eb;
+    border-right: 1px solid $border;
 
     &:last-child {
       border: none;
@@ -34,7 +34,7 @@
         display: block;
         text-align: center;
         margin: 0 8px;
-        border-top: 1px solid #e8e8eb;
+        border-top: 1px solid $border;
         padding: 12px 0 0;
         font-size: 14px;
         line-height: 17px;

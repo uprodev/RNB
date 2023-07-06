@@ -118,6 +118,10 @@ button {
       font-size: 16px;
       line-height: 19px;
 
+      &:before {
+        right: 74px;
+      }
+
       .icon {
         width: 24px;
         height: 24px;
@@ -202,6 +206,10 @@ button {
       font-size: 16px;
       line-height: 19px;
 
+      &:before {
+        right: 74px;
+      }
+
       .icon {
         width: 24px;
         height: 24px;
@@ -273,6 +281,11 @@ button {
     color: $black;
     font-size: 14px;
     line-height: 17px;
+
+    span {
+      opacity: 0.5;
+      margin-left: 10px;
+    }
 
     &:hover {
       background-color: $gray3;

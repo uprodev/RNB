@@ -1,15 +1,44 @@
 .content-nav {
-  padding: 10px;
-  overflow: auto;
+  padding: 10px 10px 0.1px;
+  margin: 100px 0 0;
+  border-top: 1px solid $border;
+  border-bottom: 1px solid $border;
+
+  & + .block-team-single .block-team-single-intro {
+    border-top: none !important;
+  }
+
+  .link-back {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;
+    border: 1px solid #dcdcde;
+    border-radius: 99px;
+    height: 34px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.2;
+    text-transform: none;
+    color: $black;
+    white-space: nowrap;
+    margin: 0 0 10px;
+
+    img {
+      margin: 0 16px 0 0;
+      display: block;
+    }
+  }
 
   ul {
-    display: inline-flex;
+    display: flex;
+    flex-wrap: wrap;
     margin: 0;
     padding: 0;
     list-style: none;
 
     li {
-      margin: 0 10px 0 0;
+      margin: 0 10px 10px 0;
     }
 
     a {
@@ -32,8 +61,50 @@
     }
   }
 
+  &--type1 {
+    ul {
+      li {
+        margin: 0 12px 12px 0;
+      }
+
+      a,
+      button {
+        padding: 0 16px;
+        border: 1px solid #dcdcde;
+        border-radius: 99px;
+        height: 34px;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1.2;
+        text-transform: none;
+        color: $black;
+        white-space: nowrap;
+        background: none;
+
+        &:hover,
+        &.active {
+          background-color: $black;
+          border-color: $black;
+          color: $white;
+        }
+      }
+    }
+  }
+
   @include media-breakpoint-up(xl) {
     padding: 11px 40px 12px;
+    margin: 145px 0 0;
+
+    .link-back {
+      padding: 0 25px;
+      height: 39px;
+      font-size: 16px;
+      margin: 0;
+
+      img {
+        margin: 0 26px 0 0;
+      }
+    }
 
     ul {
       display: inline-flex;
@@ -47,6 +118,17 @@
 
       a {
         padding: 1px 10px;
+      }
+    }
+
+    &--type1 {
+      ul {
+        a,
+        button {
+          padding: 0 25px;
+          height: 39px;
+          font-size: 16px;
+        }
       }
     }
   }

@@ -122,3 +122,107 @@
     margin-bottom: 160px;
   }
 }
+
+.spacing-9 {
+  padding: 9px 0 70px;
+
+  .row {
+    --bs-gutter-y: 25px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding: 40px 0 110px;
+  }
+}
+
+.spacing-10 {
+  padding: 0 0 72px;
+
+  .row {
+    --bs-gutter-y: 29px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding: 0 0 110px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    padding: 0 0 159px;
+  }
+}
+
+.spacing-11 {
+  padding: 12px 0;
+
+  .row {
+    --bs-gutter-x: 14px;
+    --bs-gutter-y: 24px;
+  }
+
+  .block-title {
+    margin: 0 0 100px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding: 100px 0;
+  }
+
+  @include media-breakpoint-up(xl) {
+    padding: 160px 0;
+
+    .block-title {
+      margin: 0 0 60px;
+    }
+  }
+}
+
+.spacing-12 {
+  padding: 12px 0 0;
+
+  .block-title {
+    margin: 0 0 12px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding: 60px 0 100px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    padding: 60px 0 160px;
+
+    .block-title {
+      margin: 0 0 60px;
+    }
+  }
+}
+
+.spacing-13 {
+  padding: 12px 0 0;
+
+  .block-title {
+    margin: 0 0 12px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding: 60px 0 0;
+    border-bottom: 1px solid $border;
+    margin: 0 0 100px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    padding: 60px 0 0;
+    margin: 0 0 160px;
+
+    .block-title {
+      margin: 0 0 60px;
+    }
+  }
+}
+
+.spacing-14 {
+  .block-team-single-intro {
+    @include media-breakpoint-up(xl) {
+      padding-bottom: 120px;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.box-border {
+  --space: 0px;
+
+  padding: 0 0 0 23px;
+  color: $text2;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: var(--space);
+    bottom: var(--space);
+    width: 3px;
+    background-color: $red1;
+    border-radius: 99px;
+  }
+
+  p {
+    margin: 0 0 1.2em;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: 18px;
+    line-height: 24px;
+
+    p {
+      margin: 0 0 24px;
+    }
+  }
+}

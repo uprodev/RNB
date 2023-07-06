@@ -8,7 +8,7 @@
     top: 0;
     right: 0;
     height: 1px;
-    background-color: #e8e8eb;
+    background-color: $border;
   }
   &:after {
     content: "";
@@ -17,7 +17,7 @@
     top: 8px;
     bottom: 8px;
     width: 1px;
-    background-color: #e8e8eb;
+    background-color: $border;
   }
 
   .row {
@@ -42,11 +42,11 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    border-top: 1px solid #e8e8eb;
+    border-top: 1px solid $border;
 
     li {
       padding: 10px 0 9.5px;
-      border-bottom: 1px solid #e8e8eb;
+      border-bottom: 1px solid $border;
     }
   }
 
@@ -58,7 +58,7 @@
     .row {
       & > div {
         &:not(:last-child) {
-          border-right: 1px solid #e8e8eb;
+          border-right: 1px solid $border;
         }
       }
     }
@@ -67,7 +67,7 @@
       border: none;
 
       li {
-        border-top: 1px solid #e8e8eb;
+        border-top: 1px solid $border;
         border-bottom: none;
       }
     }

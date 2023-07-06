@@ -1,0 +1,362 @@
+.block-service {
+  padding: 12px 0;
+
+  .block-title {
+    margin: 0 0 100px;
+  }
+
+  .item-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    border-radius: 99px;
+    font-family: $font-family-mono;
+    height: 24px;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 1;
+    flex: 0 0 auto;
+    margin: 0 0 12px;
+    background-color: #f7f8fa;
+    color: $text3;
+  }
+
+  .row {
+    --bs-gutter-x: 12px;
+    --bs-gutter-y: 12px;
+  }
+
+  &--red {
+    border-top: 1px solid $red4;
+    border-bottom: 1px solid $red4;
+    background: $red3;
+    color: $darkred1;
+
+    .item-number {
+      color: $darkred1;
+      background-color: $red3;
+    }
+  }
+
+  &--blue {
+    border-top: 1px solid $blue6;
+    border-bottom: 1px solid $blue6;
+    background: $blue5;
+    color: $darkblue1;
+
+    .item-number {
+      color: $darkblue1;
+      background-color: $blue5;
+    }
+  }
+
+  &.block-service-01 {
+    .item {
+      padding: 20px 20px 74px;
+      position: relative;
+      height: 100%;
+
+      &:after {
+        content: "";
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+        right: 20px;
+        height: 6px;
+        border-radius: 10px;
+      }
+
+      p {
+        margin: 0;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+
+        span {
+          opacity: 0.56;
+        }
+      }
+    }
+
+    &.block-service--red {
+      .item {
+        background: $red4;
+      }
+
+      .row {
+        & > div {
+          &:nth-child(1) {
+            .item {
+              &:after {
+                background-color: rgba(107, 0, 32, 0.14);
+              }
+            }
+          }
+          &:nth-child(2) {
+            .item {
+              &:after {
+                background-color: #d3b3bd;
+              }
+            }
+          }
+          &:nth-child(3) {
+            .item {
+              &:after {
+                background-color: #cba6b1;
+              }
+            }
+          }
+          &:nth-child(4) {
+            .item {
+              &:after {
+                background-color: #ae7385;
+              }
+            }
+          }
+          &:nth-child(5) {
+            .item {
+              &:after {
+                background-color: #6b0020;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.block-service-02 {
+    .item {
+      border: 1px solid $border;
+      padding: 20px 20px 74px;
+      position: relative;
+      height: 100%;
+
+      &:after {
+        content: "";
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+        right: 20px;
+        height: 6px;
+        border-radius: 10px;
+      }
+
+      p {
+        margin: 0;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+      }
+    }
+
+    .row {
+      & > div {
+        &:nth-child(1) {
+          .item {
+            &:after {
+              background-color: #dbdbdb;
+            }
+          }
+        }
+        &:nth-child(2) {
+          .item {
+            &:after {
+              background-color: #c7c7c7;
+            }
+          }
+        }
+        &:nth-child(3) {
+          .item {
+            &:after {
+              background-color: #b8b8b8;
+            }
+          }
+        }
+        &:nth-child(4) {
+          .item {
+            &:after {
+              background-color: #808080;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.block-service-03 {
+    .item {
+      padding: 20px;
+      border-left: 3px solid;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+
+      p {
+        margin: 0 0 34px;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+      }
+
+      .item-number {
+        margin: auto 0 0;
+        align-self: flex-start;
+      }
+    }
+
+    &.block-service--red {
+      .item {
+        background: $red4;
+        border-color: $red1;
+      }
+    }
+
+    &.block-service--blue {
+      .item {
+        background: $blue5;
+        border-color: $blue1;
+      }
+    }
+  }
+
+  &.block-service-04 {
+    padding-bottom: 40px;
+
+    .item {
+      margin: 0 0 20px;
+
+      .item-title {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 24px;
+        padding: 12px 0;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+        color: $text3;
+
+        li {
+          border-top: 1px solid $border;
+          padding: 10px 0;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          p {
+            color: $black;
+            margin: 0;
+            width: calc(50% - 6px);
+            flex: 0 0 auto;
+          }
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    padding: 40px 0;
+    margin: 0 0 160px;
+
+    .block-title {
+      margin: 0 0 60px;
+    }
+
+    .item-number {
+      height: 30px;
+      font-size: 14px;
+      margin: 0 0 20px;
+    }
+
+    &.block-service-01,
+    &.block-service-02 {
+      .item {
+        min-height: 504px;
+
+        &:after {
+          height: 8px;
+        }
+
+        p {
+          font-size: 24px;
+          line-height: 30px;
+        }
+      }
+    }
+
+    &.block-service-02 {
+      padding-bottom: 0;
+    }
+
+    &.block-service-03 {
+      .item {
+        min-height: 188px;
+
+        p {
+          font-size: 20px;
+          line-height: normal;
+        }
+      }
+    }
+
+    &.block-service-04 {
+      padding-bottom: 0;
+      margin: 0 0 136px;
+
+      .block-title {
+        margin: 0 0 115px;
+      }
+
+      .item {
+        margin: 0 0 48px;
+
+        .item-title {
+          font-size: 24px;
+          line-height: 30px;
+          padding: 0 0 20px;
+        }
+
+        ul {
+          font-size: 18px;
+          line-height: 24px;
+
+          li {
+            padding: 19.5px 0;
+
+            p {
+              width: 65.2%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.service-images {
+  margin: 0 0 60px;
+
+  .row {
+    --bs-gutter-x: 14px;
+  }
+
+  figure {
+    position: relative;
+    padding-top: 142%;
+
+    img {
+      @include img-abs;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    margin: 0 0 102px;
+  }
+}

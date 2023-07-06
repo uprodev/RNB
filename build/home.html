@@ -83,7 +83,7 @@
           </ul>
         </nav>
 
-        <div id="about" class="spacing-1 border-top border-bottom">
+        <div id="about" class="spacing-1 border-bottom">
           <div class="container-fluid">
             <div class="row g-xxl-0">
               <div class="col-md-6">
@@ -93,7 +93,7 @@
               </div>
               <div class="col-md-6">
                 <div class="d-md-flex justify-content-end">
-                  <a href="#" class="btn btn-arrow-red">
+                  <a href="#modalForm" class="btn btn-arrow-red btn-modal">
                     Дізнатися ціну
                     <span class="icon">
                       <svg width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -117,7 +117,7 @@
                 <div class="font-3 mb-5 mb-lg-7">
                   <p>RNB Team  — це група експертів, кожен член якої володіє фаховими навичками: від системних адміністраторів безпеки до аудиторів і аналітиків. Ми прагнемо створити середовище підвищеної безпеки й захисту, аби створити надійне майбутнє для наших клієнтів.</p>
                 </div>
-                <a href="#" class="btn btn-arrow">
+                <a href="#teams" class="btn btn-arrow btn-anchor">
                   Learn more
                   <span class="icon">
                     <svg width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -254,7 +254,7 @@
                 <div class="team-item-description">
                   <div class="team-item-description-top">
                     <div class="team-title">
-                      <span class="team-letter">B</span>
+                      <span class="team-letter">R</span>
                       <span class="team-title-text">Red Team</span>
                     </div>
                     <p>Red Team є ретельно підібраною групою фахівців, яка використовує кращі світові практики та власний унікальний досвід. Ми розробляємо та застосовуємо інноваційні стратегії і зловмисне програмне забезпечення для проникнення навіть у найзахищеніші системи.</p>
@@ -622,7 +622,7 @@
                     </div>
                     <div class="form-fields">
                       <div class="field">
-                        <input type="text" class="form-control" placeholder="Повне ім’я" />
+                        <input type="text" class="form-control" placeholder="ПІБ" />
                       </div>
                       <div class="row">
                         <div class="col-6">
@@ -819,7 +819,7 @@
                       Наскрізне тестування<br />
                       для банківської фірми
                     </p>
-                    <p>CISO та заступник керівника управління ризиками, Агропросперіс Банк</p>
+                    <p>CISO та заступник керівника <br />управління ризиками, <br />Агропросперіс Банк</p>
                     <div class="author">
                       <p>
                         Андрій Янчук<br />
@@ -911,7 +911,7 @@
                     </div>
                   </div>
                   <div class="col-2">
-                    <p>CISO та заступник керівника управління ризиками, Агропросперіс Банк</p>
+                    <p>CISO та заступник керівника <br />управління ризиками, <br />Агропросперіс Банк</p>
                   </div>
                   <div class="col-2">
                     <p>
@@ -1037,7 +1037,7 @@
                 <div class="form">
                   <form action="#">
                     <div class="field">
-                      <input type="text" class="form-control" placeholder="Повне ім’я" />
+                      <input type="text" class="form-control" placeholder="ПІБ" />
                     </div>
                     <div class="row">
                       <div class="col-6">
@@ -1197,6 +1197,80 @@
         </div>
       </footer>
       <!-- end page footer-->
+    </div>
+
+    <div id="modalForm" class="modal-wrapper">
+      <div class="modal-bg"></div>
+      <div class="modal-box">
+        <div class="contact-form">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="text font-3">
+                  <div class="title">Розкажіть нам про ваш проєкт</div>
+                  <p>Надішліть нам повідомлення, напишіть нам на info@rnb-team або заплануйте зустріч через Calendly</p>
+                  <div class="form-sticker">RNB team</div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form">
+                  <form action="#">
+                    <div class="field">
+                      <input type="text" class="form-control" placeholder="ПІБ" />
+                    </div>
+                    <div class="row">
+                      <div class="col-6">
+                        <div class="field">
+                          <input type="email" class="form-control" placeholder="Електронна Пошта" />
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="field">
+                          <input type="tel" class="form-control" placeholder="Номер Телефону" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="field">
+                          <input type="text" class="form-control" placeholder="Корпоративний Сайт" />
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="field">
+                          <select class="form-select">
+                            <option value="0">Тестування На Проникнення</option>
+                            <option value="1">Тестування На Проникнення</option>
+                            <option value="2">Тестування На Проникнення</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="field">
+                      <textarea class="form-control" placeholder="Повідомлення"></textarea>
+                    </div>
+                    <div class="submit">
+                      <button type="submit" class="btn btn-arrow-blue">
+                        Надіслати повидомлення
+                        <span class="icon">
+                          <svg width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 7L4 4L1 1" stroke="#F4F5F7" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </button>
+                      <div class="info">
+                        <span class="icon"><img src="assets/img/icons/ico-info.svg" alt="" /></span>
+                        <p>Натискаючи «Надіслати повідомлення», ви приймаєте Умови використання та Політику конфіденційності</p>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="assets/js/jquery-3.6.0.min.js"></script>
