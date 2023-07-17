@@ -30,9 +30,13 @@ jQuery(document).ready(function ($) {
 
   if ($(".sertificates-slider").length) {
     var swiper1 = new Swiper(".sertificates-slider", {
-      speed: 700,
+      speed: 5000,
+      loop: true,
       spaceBetween: 0,
       slidesPerView: "auto",
+      autoplay: {
+        delay: 0,
+      },
     });
   }
 
