@@ -105,11 +105,13 @@
       .form-control {
         font-size: $input-font-size-lg;
         padding: $input-padding-y-lg $input-padding-x-lg;
+        height: calc(2.12rem + 22px);
       }
       .form-select {
         font-size: $input-font-size-lg;
-        padding: 1.2rem 3rem 1.2rem 1.2rem;
+        padding: $input-padding-y-lg 3rem $input-padding-y-lg $input-padding-x-lg;
         background-size: $form-select-bg-size-lg;
+        height: calc(2.12rem + 22px);
       }
 
       textarea {

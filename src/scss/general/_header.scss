@@ -146,6 +146,7 @@
             width: calc(100% - 120px);
             height: 42px;
             display: none;
+            z-index: 9;
 
             &.active {
               display: block;
@@ -194,6 +195,10 @@
               }
             }
           }
+        }
+
+        .nav-trigger {
+          position: relative;
         }
       }
     }

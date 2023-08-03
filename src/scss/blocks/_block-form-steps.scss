@@ -26,6 +26,9 @@
   }
 
   .form-left {
+    display: flex;
+    flex-direction: column;
+
     .form-sticker {
       color: $darkblue3;
     }
@@ -166,6 +169,37 @@
         padding: 0 26px;
         background-color: #edeff2;
         margin: 0 0 8px;
+      }
+    }
+  }
+
+  .form-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+    padding: 40px 0 0;
+
+    .btn {
+      &.btn-arrow {
+        border: 1px solid #d8dde5;
+        background-color: transparent;
+
+        &.btn-prev {
+          &:before {
+            right: auto;
+            left: 39px;
+          }
+
+          .icon {
+            margin-left: 0;
+            margin-right: 40px;
+            transform: scaleX(-1);
+          }
+        }
+
+        &[disabled] {
+          opacity: 0;
+        }
       }
     }
   }

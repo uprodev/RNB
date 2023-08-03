@@ -80,23 +80,25 @@ a {
   border-color: #e8e8eb !important;
 }
 
-.tag {
-  border: 1px solid #e0e0e1;
-  padding: 0 8px 1px;
-  display: inline-flex;
-  align-items: center;
-  border-radius: 30px;
-  height: 26px;
-  font-size: 12px;
-  line-height: 14px;
-  text-transform: capitalize;
-  margin: 0 0 12px;
+div {
+  .tag {
+    border: 1px solid #e0e0e1;
+    padding: 0 8px 1px;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 30px;
+    height: 26px;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: capitalize;
+    margin: 0 0 12px;
 
-  @include media-breakpoint-up(lg) {
-    font-size: 14px;
-    line-height: 17px;
-    height: 29px;
-    padding: 0 10px 1px;
-    margin: 0 0 42px;
+    @include media-breakpoint-up(lg) {
+      font-size: 14px;
+      line-height: 17px;
+      height: 29px;
+      padding: 0 10px 1px;
+      margin: 0 0 42px;
+    }
   }
 }

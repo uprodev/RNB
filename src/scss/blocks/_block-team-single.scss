@@ -114,6 +114,10 @@
       text-transform: capitalize;
       line-height: normal;
       margin: 0 0 20px;
+
+      @include media-breakpoint-down(md) {
+        height: auto !important;
+      }
     }
 
     p {
@@ -189,12 +193,6 @@
       display: flex;
       flex-direction: column;
       padding: 20px 20px 27px;
-
-      .title {
-        height: 71px;
-        overflow: hidden;
-        margin: 0;
-      }
 
       p {
         margin: 0 0 31px;
