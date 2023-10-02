@@ -84,40 +84,223 @@
         background: $red4;
       }
 
-      .row {
-        & > div {
-          &:nth-child(1) {
-            .item {
-              &:after {
-                background-color: rgba(107, 0, 32, 0.14);
+      &.block-service-01--items3 {
+        .row {
+          & > div {
+            &:nth-child(1) {
+              .item {
+                &:after {
+                  background-color: rgba(107, 0, 32, 0.14);
+                }
+              }
+            }
+            &:nth-child(2) {
+              .item {
+                &:after {
+                  background-color: rgba(107, 0, 32, 0.5);
+                }
+              }
+            }
+            &:nth-child(3) {
+              .item {
+                &:after {
+                  background-color: rgba(107, 0, 32, 1);
+                }
               }
             }
           }
-          &:nth-child(2) {
-            .item {
-              &:after {
-                background-color: #d3b3bd;
+        }
+      }
+
+      &.block-service-01--items4 {
+        .row {
+          & > div {
+            &:nth-child(1) {
+              .item {
+                &:after {
+                  background-color: rgba(107, 0, 32, 0.14);
+                }
+              }
+            }
+            &:nth-child(2) {
+              .item {
+                &:after {
+                  background-color: rgba(107, 0, 32, 0.22);
+                }
+              }
+            }
+            &:nth-child(3) {
+              .item {
+                &:after {
+                  background-color: rgba(107, 0, 32, 0.5);
+                }
+              }
+            }
+            &:nth-child(4) {
+              .item {
+                &:after {
+                  background-color: rgba(107, 0, 32, 1);
+                }
               }
             }
           }
-          &:nth-child(3) {
-            .item {
-              &:after {
-                background-color: #cba6b1;
+        }
+      }
+
+      &.block-service-01--items5 {
+        .row {
+          & > div {
+            &:nth-child(1) {
+              .item {
+                &:after {
+                  background-color: rgba(107, 0, 32, 0.14);
+                }
+              }
+            }
+            &:nth-child(2) {
+              .item {
+                &:after {
+                  background-color: rgba(107, 0, 32, 0.22);
+                }
+              }
+            }
+            &:nth-child(3) {
+              .item {
+                &:after {
+                  background-color: rgba(107, 0, 32, 0.28);
+                }
+              }
+            }
+            &:nth-child(4) {
+              .item {
+                &:after {
+                  background-color: rgba(107, 0, 32, 0.5);
+                }
+              }
+            }
+            &:nth-child(5) {
+              .item {
+                &:after {
+                  background-color: rgba(107, 0, 32, 1);
+                }
               }
             }
           }
-          &:nth-child(4) {
-            .item {
-              &:after {
-                background-color: #ae7385;
+        }
+      }
+      &.block-service-01--items7 {
+        .row {
+          & > div {
+            &:nth-child(1) {
+              .item {
+                &:after {
+                  background-color: rgba(107, 0, 32, 0.14);
+                }
+              }
+            }
+            &:nth-child(2) {
+              .item {
+                &:after {
+                  background-color: rgba(107, 0, 32, 0.22);
+                }
+              }
+            }
+            &:nth-child(3) {
+              .item {
+                &:after {
+                  background-color: rgba(107, 0, 32, 0.28);
+                }
+              }
+            }
+            &:nth-child(4) {
+              .item {
+                &:after {
+                  background-color: rgba(107, 0, 32, 0.35);
+                }
+              }
+            }
+            &:nth-child(5) {
+              .item {
+                &:after {
+                  background-color: rgba(107, 0, 32, 0.48);
+                }
+              }
+            }
+            &:nth-child(6) {
+              .item {
+                &:after {
+                  background-color: rgba(107, 0, 32, 0.58);
+                }
+              }
+            }
+            &:nth-child(7) {
+              .item {
+                &:after {
+                  background-color: rgba(107, 0, 32, 1);
+                }
               }
             }
           }
-          &:nth-child(5) {
-            .item {
-              &:after {
-                background-color: #6b0020;
+        }
+      }
+
+      &.block-service-01--items8 {
+        .row {
+          & > div {
+            &:nth-child(1) {
+              .item {
+                &:after {
+                  background-color: rgba(107, 0, 32, 0.14);
+                }
+              }
+            }
+            &:nth-child(2) {
+              .item {
+                &:after {
+                  background-color: rgba(107, 0, 32, 0.22);
+                }
+              }
+            }
+            &:nth-child(3) {
+              .item {
+                &:after {
+                  background-color: rgba(107, 0, 32, 0.28);
+                }
+              }
+            }
+            &:nth-child(4) {
+              .item {
+                &:after {
+                  background-color: rgba(107, 0, 32, 0.35);
+                }
+              }
+            }
+            &:nth-child(5) {
+              .item {
+                &:after {
+                  background-color: rgba(107, 0, 32, 0.48);
+                }
+              }
+            }
+            &:nth-child(6) {
+              .item {
+                &:after {
+                  background-color: rgba(107, 0, 32, 0.58);
+                }
+              }
+            }
+            &:nth-child(7) {
+              .item {
+                &:after {
+                  background-color: rgba(107, 0, 32, 0.67);
+                }
+              }
+            }
+            &:nth-child(8) {
+              .item {
+                &:after {
+                  background-color: rgba(107, 0, 32, 1);
+                }
               }
             }
           }
@@ -272,6 +455,7 @@
         right: 20px;
         height: 6px;
         border-radius: 10px;
+        background-color: #707070;
       }
 
       p {

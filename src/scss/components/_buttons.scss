@@ -93,7 +93,8 @@ button {
     }
 
     &:hover,
-    &.active {
+    &.active,
+    &.btn-solid {
       background-color: $red1;
       color: $white;
 
@@ -130,6 +131,28 @@ button {
         svg {
           width: 5px;
           height: 8px;
+        }
+      }
+
+      &.btn-lg {
+        height: 72px;
+        padding: 0 30px;
+        font-size: 19px;
+        line-height: 19px;
+
+        &:before {
+          right: 84px;
+        }
+
+        .icon {
+          width: 30px;
+          height: 30px;
+          margin-left: 60px;
+
+          svg {
+            width: 6px;
+            height: 10px;
+          }
         }
       }
     }
@@ -218,6 +241,28 @@ button {
         svg {
           width: 5px;
           height: 8px;
+        }
+      }
+
+      &.btn-lg {
+        height: 72px;
+        padding: 0 30px;
+        font-size: 19px;
+        line-height: 19px;
+
+        &:before {
+          right: 84px;
+        }
+
+        .icon {
+          width: 30px;
+          height: 30px;
+          margin-left: 60px;
+
+          svg {
+            width: 6px;
+            height: 10px;
+          }
         }
       }
     }

@@ -36,6 +36,12 @@
           width: 66.66%;
         }
       }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        width: auto;
+      }
     }
 
     .subscription {
@@ -95,6 +101,19 @@
           @include placeholder-text(#565657, 1);
           color: $white;
           padding: 13px 20px;
+        }
+
+        .wpcf7-form-control-wrap {
+          position: static;
+        }
+
+        .wpcf7-not-valid-tip {
+          position: absolute;
+          top: 110%;
+          left: 0;
+          width: 100%;
+          right: 0;
+          font-size: 0.8em;
         }
       }
     }

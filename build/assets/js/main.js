@@ -25,9 +25,9 @@ jQuery(document).ready(function ($) {
       if (!$(this).parents("ul").hasClass("filter") && !$(this).hasClass("link-back")) {
         e.preventDefault();
         var dest = $($(this).attr("href"));
-
+        $(".content-nav a.active").removeClass("active");
+        $(this).addClass("active");
         if (dest.length) {
-          console.log(dest.offset().top);
           $("html, body").animate({ scrollTop: dest.offset().top - $(".header").outerHeight() }, 500);
         }
       }

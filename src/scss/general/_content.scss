@@ -102,3 +102,28 @@ div {
     }
   }
 }
+
+.wpcf7-response-output {
+  display: none !important;
+}
+
+.btn-fixed {
+  background: $red1;
+  width: 45px;
+  height: 45px;
+  border-radius: 99px;
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+
+  img {
+    display: block;
+    width: 24px;
+    height: auto;
+  }
+}
