@@ -3,6 +3,16 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  border-radius: 8px;
+
+  .image {
+    @include img-abs-container(76.2%);
+    margin: -1px -1px 0;
+
+    img {
+      border-radius: 8px 8px 0 0;
+    }
+  }
 
   .title {
     padding: 15px;
@@ -18,9 +28,8 @@
       &:before {
         content: "";
         width: 13px;
-        height: 13px;
-        background-color: $blue1;
-        border-radius: 2px;
+        height: 15px;
+        background: url(../img/icons/ico-blog.svg) no-repeat;
         margin: 5px 8px 0 0;
         flex: 0 0 auto;
       }
@@ -82,7 +91,7 @@
 
   @include media-breakpoint-up(xl) {
     .title {
-      padding: 19px;
+      padding: 19px 17px 19px 16px;
       min-height: 0;
 
       a {
@@ -92,7 +101,7 @@
         &:before {
           width: 15px;
           height: 15px;
-          margin: 8px 12px 0 0;
+          margin: 8px 8px 0 0;
         }
 
         &:after {
@@ -106,7 +115,7 @@
     }
 
     .text {
-      padding: 19px 19px 21px;
+      padding: 20px 17px 65px;
     }
   }
 }

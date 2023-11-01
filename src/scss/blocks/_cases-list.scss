@@ -87,16 +87,19 @@
     .cases-list {
       .case-list-item {
         padding: 52px 0;
-        position: relative;
 
-        &:after {
-          content: "";
-          position: absolute;
-          right: 20px;
-          top: 40px;
-          background: url(../img/icons/ico-arrow-case.svg);
-          width: 43px;
-          height: 43px;
+        .container-fluid {
+          position: relative;
+
+          &:after {
+            content: "";
+            position: absolute;
+            right: 20px;
+            top: 0;
+            background: url(../img/icons/ico-arrow-case.svg);
+            width: 43px;
+            height: 43px;
+          }
         }
 
         .description {
@@ -109,8 +112,10 @@
   @include media-breakpoint-up(xl) {
     .cases-list {
       .case-list-item {
-        &:after {
-          right: 40px;
+        .container-fluid {
+          &:after {
+            right: 40px;
+          }
         }
 
         .title {

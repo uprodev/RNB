@@ -1,7 +1,6 @@
 .block-teams {
   .team-item {
-    border: 1px solid #e1e5eb;
-    border-width: 1px 0;
+    margin: 0 -$grid-gutter-width-m;
 
     .row {
       height: 100%;
@@ -48,46 +47,33 @@
 
       .team-images {
         position: relative;
-        & > div {
+        overflow: hidden;
+        margin: 0 0 40px;
+
+        ul {
+          margin: 0 -20px;
+          padding: 0;
+          list-style: none;
           display: flex;
-          justify-content: space-between;
-          transition: opacity 0.2s ease-in-out;
 
-          ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            display: flex;
+          li {
+            width: 100%;
+            padding: 0 20px;
 
-            li {
-              & + li {
-                margin-left: 20px;
-              }
-
-              img {
-                display: block;
-                width: 102px;
-                height: 102px;
-                border-radius: 100%;
-              }
+            img {
+              display: block;
+              width: 100%;
+              height: auto;
+              border-radius: 100%;
             }
-          }
-
-          &.team-images-hover {
-            position: absolute;
-            left: 0;
-            top: 0;
-            right: 0;
-            opacity: 0;
           }
         }
       }
 
       .team-icons {
-        position: absolute;
+        position: relative;
         left: 50%;
-        top: 50%;
-        transform: translate3d(-50%, -50%, 0);
+        transform: translate3d(-50%, 0, 0);
         display: flex;
         justify-content: center;
 
@@ -107,53 +93,68 @@
           border-radius: 100%;
           position: relative;
           font-size: 16px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
           text-transform: uppercase;
           position: relative;
           margin: 0 14px;
-          border: 1px dashed #e8e9eb;
+          padding: 2px;
           color: $text3;
           transition: all 0.2s;
 
-          &:after {
+          &:before {
             content: "";
-            position: absolute;
-            left: 50%;
-            top: 94px;
-            transform: translateX(-50%);
-            opacity: 0;
-            transition: opacity 0.2s;
-            width: 8px;
-            height: 5px;
+            @include abs;
+            border-radius: 100%;
           }
 
           &--blue {
-            &:after {
-              background-image: url(../img/icons/ico-arrow-up-blue.svg);
+            &:before {
+              background: linear-gradient(to right, rgba(0, 68, 170, 1) 0%, rgba(0, 68, 170, 0) 100%);
             }
+
             &.active {
-              border: 1px solid #ebeff5;
-              background-color: #ebeff5;
-              color: $darkblue1;
+              background-color: $blue1;
+              color: $white;
+
+              &:before {
+                display: none;
+              }
             }
           }
           &--red {
-            &:after {
-              background-image: url(../img/icons/ico-arrow-up-red.svg);
+            &:before {
+              background: linear-gradient(to right, rgba(209, 0, 63, 1) 0%, rgba(209, 0, 63, 0) 100%);
             }
             &.active {
-              border: 1px solid #f5ebee;
-              background-color: #f5ebee;
-              color: $darkred1;
+              background-color: $red1;
+              color: $white;
+              &:before {
+                display: none;
+              }
+            }
+          }
+
+          span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 100%;
+            width: 100%;
+            height: 100%;
+            background-color: $white;
+            position: relative;
+            z-index: 2;
+          }
+
+          &.active {
+            span {
+              background-color: transparent;
             }
           }
 
           &:not(.active) {
-            span {
-              -webkit-animation: rotate 2s ease-in-out 0s infinite forwards;
-              animation: rotate 2s ease-in-out 0s infinite forwards;
+            &:before {
+              -webkit-animation: rotate 4s linear 0s infinite forwards;
+              animation: rotate 4s linear 0s infinite forwards;
             }
           }
         }
@@ -168,70 +169,14 @@
             }
           }
         }
-
-        .team-images {
-          & > div {
-            &.team-images-start {
-              opacity: 0;
-            }
-            &.team-images-hover {
-              opacity: 1;
-            }
-          }
-        }
-
-        .team-icons {
-          .team-icon {
-            &:not(.active) {
-              span {
-                -webkit-animation: none;
-                animation: rotate none;
-              }
-            }
-
-            &--blue {
-              &:not(.active) {
-                &:after {
-                  opacity: 1;
-                }
-                border: 1px solid #ebeff5;
-                background-color: #ebeff5;
-                color: $darkblue1;
-              }
-              &.active {
-                border: 1px dashed #e8e9eb;
-                color: $text3;
-                background-color: transparent;
-              }
-            }
-            &--red {
-              &:not(.active) {
-                &:after {
-                  opacity: 1;
-                }
-                border: 1px solid #f5ebee;
-                background-color: #f5ebee;
-                color: $darkred1;
-              }
-              &.active {
-                border: 1px dashed #e8e9eb;
-                color: $text3;
-                background-color: transparent;
-              }
-            }
-          }
-        }
       }
 
       @keyframes rotate {
         0% {
           transform: rotate(0);
         }
-        50% {
-          transform: rotate(-180deg);
-        }
         100% {
-          transform: rotate(0);
+          transform: rotate(360deg);
         }
       }
       @-webkit-keyframes rotate {
@@ -252,8 +197,11 @@
       height: 100%;
 
       .team-item-description-top {
-        @extend .font-3;
-        margin: 0 0 108px;
+        margin: 0 0 75px;
+
+        p {
+          margin: 0 0 1.14em;
+        }
       }
 
       .team-title {
@@ -285,10 +233,10 @@
 
       .team-item-description-bottom {
         border-top: 1px solid #f2e9eb;
-        padding: 13px 0 0;
+        padding: 20px 0 0;
 
         h5 {
-          margin: 0 0 42px;
+          margin: 0 0 13px;
         }
 
         ul {
@@ -321,6 +269,12 @@
               margin: 0 0 20px;
               font-family: $font-family-mono;
               border-radius: 20px;
+              opacity: 0;
+            }
+
+            p {
+              opacity: 0;
+              transform: translateY(15px);
             }
           }
         }
@@ -333,11 +287,11 @@
       .team-toggler {
         .team-title {
           .team-title-text {
-            background-color: #dee3ec;
-            color: $blue1;
+            background-color: #f0e6e9;
+            color: $red1;
 
             .team-letter {
-              color: $blue1;
+              color: $red1;
             }
           }
         }
@@ -383,11 +337,12 @@
       .team-toggler {
         .team-title {
           .team-title-text {
-            background-color: $red4;
-            color: $red1;
+            background-color: $blue5;
+            color: $blue1;
 
             .team-letter {
-              color: $red1;
+              color: $blue1;
+              background-color: $white;
             }
           }
         }
@@ -433,8 +388,6 @@
   @include media-breakpoint-up(lg) {
     display: flex;
     width: 200vw;
-    border: 1px solid #e1e5eb;
-    border-width: 1px 0;
 
     &.moved {
       transform: translateX(-50%);
@@ -445,9 +398,19 @@
       opacity: 0;
       transition: opacity 1s;
       border: none;
+      margin: 0;
+      position: relative;
 
       &.active {
         opacity: 1;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 50%;
       }
 
       .team-toggler,
@@ -458,53 +421,88 @@
       .team-item-description {
         display: flex;
         flex-direction: column;
+        position: relative;
+        z-index: 2;
+        background-color: transparent;
+
+        .team-item-description-top {
+          font-size: 18px;
+          line-height: 1.2;
+        }
 
         .team-item-description-bottom {
           margin-top: auto;
         }
       }
-    }
-  }
 
-  @include media-breakpoint-up(xl) {
-    .team-toggler {
-      padding: 40px 20px 40px 40px;
-    }
-    .team-item-description {
-      padding: 40px 40px 40px 20px;
+      &--red {
+        &:before {
+          right: 0;
+          background: $red3;
+        }
+      }
+
+      &--blue {
+        &:before {
+          left: 0;
+          background: $blue5;
+        }
+      }
     }
   }
 
   @include media-breakpoint-up(xxl) {
     .team-item {
-      min-height: 1056px;
+      position: relative;
+
+      &:before {
+        width: 49.25%;
+      }
 
       .team-toggler {
+        padding: 76px 38px 0 0;
+
         .team-title {
-          font-size: 24px;
+          font-size: 18px;
           line-height: 30px;
+          font-weight: 500;
+          margin: 0 0 75px;
 
           .team-title-text {
             font-size: 24px;
             line-height: 30px;
+            margin: 0 25px 0 0;
+            font-weight: 400;
+          }
+        }
+
+        .team-images {
+          margin: 0 0 75px;
+
+          ul {
+            margin: 0 -25px;
+
+            li {
+              padding: 0 25px;
+            }
           }
         }
       }
 
       .team-item-description {
+        padding: 76px 0 40px 74px;
+        background-color: transparent;
+        margin: 0 -20px 0 0;
+
         .team-title {
           font-size: 24px;
           line-height: 30px;
         }
 
         .team-item-description-bottom {
-          h5 {
-            margin: 0 0 61px;
-          }
-
           ul {
             li {
-              padding: 13px 0;
+              padding: 24px 20px 19px 0;
               margin: 12px 10px;
 
               .number {
@@ -515,6 +513,16 @@
               }
             }
           }
+        }
+      }
+
+      &--blue {
+        .team-toggler {
+          padding: 76px 0 0 38px;
+        }
+
+        .team-item-description {
+          padding: 76px 74px 40px 0;
         }
       }
     }

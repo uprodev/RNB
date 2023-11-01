@@ -50,10 +50,10 @@ button {
   &.btn-arrow-red {
     height: 50px;
     background-color: $gray3;
-    border-radius: 2px;
     color: $black;
     font-size: 14px;
     line-height: 17px;
+    font-weight: 500;
     padding: 0 18px;
     position: relative;
 
@@ -70,6 +70,7 @@ button {
     }
 
     .icon {
+      flex: 0 0 auto;
       width: 18px;
       height: 18px;
       border-radius: 100%;
@@ -117,7 +118,7 @@ button {
       height: 60px;
       padding: 0 25px;
       font-size: 16px;
-      line-height: 19px;
+      line-height: 20px;
 
       &:before {
         right: 74px;
@@ -161,10 +162,10 @@ button {
   &.btn-arrow-blue {
     height: 50px;
     background-color: $gray3;
-    border-radius: 2px;
     color: $black;
     font-size: 14px;
     line-height: 17px;
+    font-weight: 500;
     padding: 0 18px;
     position: relative;
 
@@ -181,6 +182,7 @@ button {
     }
 
     .icon {
+      flex: 0 0 auto;
       width: 18px;
       height: 18px;
       border-radius: 100%;
@@ -227,7 +229,7 @@ button {
       height: 60px;
       padding: 0 25px;
       font-size: 16px;
-      line-height: 19px;
+      line-height: 20px;
 
       &:before {
         right: 74px;
@@ -271,7 +273,6 @@ button {
   &.btn-arrow {
     height: 50px;
     background-color: $gray3;
-    border-radius: 2px;
     color: $black;
     font-size: 14px;
     line-height: 17px;
@@ -322,7 +323,6 @@ button {
   &.btn-outline {
     height: 49px;
     border: 1px solid #dcdcde;
-    border-radius: 2px;
     color: $black;
     font-size: 14px;
     line-height: 17px;

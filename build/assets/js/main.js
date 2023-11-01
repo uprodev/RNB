@@ -39,6 +39,26 @@ jQuery(document).ready(function ($) {
     }
   });
 
+  if ($(".clients-list").length) {
+    var swiper11 = new Swiper(".clients-list .swiper", {
+      speed: 5000,
+      loop: true,
+      spaceBetween: 30,
+      slidesPerView: "auto",
+      autoplay: {
+        delay: 0,
+      },
+      breakpoints: {
+        1024: {
+          spaceBetween: 60,
+        },
+        1600: {
+          spaceBetween: 120,
+        },
+      },
+    });
+  }
+
   if ($(".sertificates-slider").length) {
     var swiper1 = new Swiper(".sertificates-slider", {
       speed: 5000,
@@ -251,5 +271,46 @@ jQuery(document).ready(function ($) {
   $(".block-service-01").each(function () {
     var items = $(this).find(".item").length;
     $(this).addClass("block-service-01--items" + items);
+  });
+
+  gsap.utils.toArray(".counter").forEach(function (elem) {
+    var content = elem.dataset.count;
+    gsap.to(elem, {
+      scrollTrigger: {
+        trigger: elem,
+        start: "top 80%",
+      },
+      textContent: content,
+      duration: 1,
+      ease: "none",
+      snap: { textContent: 1 },
+      stagger: {
+        onUpdate: function (item) {
+          this.targets()[0].textContent = parseInt(this.targets()[0].textContent);
+        },
+      },
+    });
+  });
+
+  gsap.utils.toArray(".block-teams .team-item-description-bottom ul li").forEach(function (elem) {
+    gsap.to(elem.querySelector(".number"), {
+      scrollTrigger: {
+        trigger: elem,
+        start: "top 80%",
+      },
+      opacity: 1,
+      duration: 1,
+      ease: "none",
+    });
+    gsap.to(elem.querySelector("p"), {
+      scrollTrigger: {
+        trigger: elem,
+        start: "top 80%",
+      },
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      ease: "none",
+    });
   });
 });

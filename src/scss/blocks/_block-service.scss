@@ -2,7 +2,7 @@
   padding: 12px 0;
 
   .block-title {
-    margin: 0 0 100px;
+    margin: 0 0 75px;
   }
 
   .item-number {
@@ -577,11 +577,10 @@
   }
 
   @include media-breakpoint-up(xl) {
-    padding: 40px 0;
-    margin: 0 0 160px;
+    padding: 75px 0;
 
     .block-title {
-      margin: 0 0 60px;
+      margin: 0 0 75px;
     }
 
     .item-number {
@@ -606,10 +605,6 @@
       }
     }
 
-    &.block-service-02 {
-      padding-bottom: 0;
-    }
-
     &.block-service-03 {
       .item {
         min-height: 188px;
@@ -622,13 +617,6 @@
     }
 
     &.block-service-04 {
-      padding-bottom: 0;
-      margin: 0 0 136px;
-
-      .block-title {
-        margin: 0 0 115px;
-      }
-
       .item {
         margin: 0 0 48px;
 
@@ -672,6 +660,6 @@
   }
 
   @include media-breakpoint-up(xl) {
-    margin: 0 0 102px;
+    margin: 0 0 75px;
   }
 }

@@ -10,6 +10,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-width: none;
+
+    @include media-breakpoint-up(xl) {
+      --bs-gutter-x: #{$grid-gutter-width-m};
+    }
   }
 
   .header-panel {

@@ -1,25 +1,24 @@
 .block-team-single {
-  .container-fluid {
-    padding: 0;
-    & > div {
-      padding-left: 12px !important;
-      padding-right: 12px !important;
+  .block-title {
+    margin: 0 0 20px;
+  }
 
-      @include media-breakpoint-up(xl) {
-        padding-left: 40px !important;
-        padding-right: 40px !important;
-      }
+  & > div {
+    padding: 40px 0;
+  }
+
+  @include media-breakpoint-up(lg) {
+    .block-title {
+      margin: 0 0 75px;
+    }
+    & > div {
+      padding: 75px 0;
     }
   }
 }
 
 .block-team-single-intro {
   border-top: 1px solid $border;
-  padding: 12px 0 60px;
-
-  .block-title {
-    margin: 0 0 20px;
-  }
 
   .images {
     display: flex;
@@ -53,7 +52,7 @@
   }
 
   .font-5 {
-    margin-top: 92px;
+    margin-top: 75px;
   }
 
   p {
@@ -70,11 +69,6 @@
 
 .block-team-single-members {
   border-top: 1px solid $border;
-  padding: 12px 0;
-
-  .block-title {
-    margin: 0 0 100px;
-  }
 
   .row {
     --bs-gutter-x: 14px;
@@ -85,18 +79,10 @@
 .block-team-single-list {
   border-top: 1px solid $border;
   padding: 12px 0 60px;
-
-  .block-title {
-    margin: 0 0 100px;
-  }
 }
 
 .block-team-single-services {
   padding: 12px;
-
-  .block-title {
-    margin: 0 0 100px;
-  }
 
   .row {
     --bs-gutter-x: 10px;
@@ -184,10 +170,6 @@
   }
 
   .block-team-single-services {
-    .block-title {
-      margin: 0 0 60px;
-    }
-
     .item {
       height: 100%;
       display: flex;
@@ -206,13 +188,7 @@
 }
 
 @include media-breakpoint-up(xl) {
-  .block-title {
-    margin: 0 0 20px;
-  }
-
   .block-team-single-intro {
-    padding: 40px 0 185px;
-
     .buttons {
       .btn {
         margin: 0 12px 12px 0;
@@ -232,12 +208,6 @@
   }
 
   .block-team-single-members {
-    padding: 39px 0 150px;
-
-    .block-title {
-      margin: 0 0 60px;
-    }
-
     .team-member {
       figure {
         padding-top: 95.36%;
@@ -245,26 +215,7 @@
     }
   }
 
-  .block-team-single-list {
-    padding: 40px 0 160px;
-
-    &:last-child {
-      padding-bottom: 138px;
-    }
-
-    .block-title {
-      margin: 0;
-    }
-  }
-
   .block-team-single-services {
-    padding: 40px 0;
-    margin: -25px 0 160px;
-
-    .block-title {
-      margin: 0 0 58px;
-    }
-
     .item {
       .title {
         font-size: 20px;
@@ -277,18 +228,18 @@
       }
     }
 
-    &--red {
-      border-bottom: 1px solid $red4;
-    }
+    // &--red {
+    //   border-bottom: 1px solid $red4;
+    // }
 
-    &--blue {
-      border-bottom: 1px solid $blue6;
-    }
+    // &--blue {
+    //   border-bottom: 1px solid $blue6;
+    // }
   }
 }
 
 @include media-breakpoint-up(xxl) {
   .block-team-single-members {
-    min-height: 1098px;
+    // min-height: 1098px;
   }
 }

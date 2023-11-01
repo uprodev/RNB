@@ -16,12 +16,12 @@
   .form-right {
     height: 100%;
     position: relative;
-    padding: 5px 10px 100px 20px;
+    padding-bottom: 38px;
 
     .form-sticker {
       position: absolute;
-      left: 20px;
-      bottom: 13px;
+      left: 0;
+      bottom: 0;
     }
   }
 
@@ -96,7 +96,7 @@
   }
 
   .form-steps {
-    margin: 0 0 45px;
+    margin: -6px 0 44px;
     color: $darkblue3;
 
     & > span {
@@ -106,15 +106,15 @@
   }
 
   .form-subtitle {
-    margin: 0 0 45px;
+    margin: 0 0 40px;
     color: $darkblue3;
-    text-transform: capitalize;
+    max-width: 21em;
   }
 
   .form-title {
     font-size: 24px;
     line-height: 30px;
-    margin: 0 0 63px;
+    margin: 0 0 42px;
   }
 
   .form-options {
@@ -122,8 +122,8 @@
     flex-wrap: wrap;
 
     .form-option {
-      margin: 0 8px 8px 0;
-      border-radius: 2px;
+      margin: 0 8px 7px 0;
+      border-radius: 50px;
       border: 1px solid $blue4;
 
       input {
@@ -136,6 +136,7 @@
         line-height: 19px;
         transition: all 0.2s;
         cursor: pointer;
+        border-radius: 50px;
 
         &:hover {
           color: $white;
@@ -177,7 +178,7 @@
     display: flex;
     justify-content: space-between;
     margin-top: auto;
-    padding: 40px 0 0;
+    padding: 15px 0 0;
 
     .btn {
       &.btn-arrow {
@@ -318,13 +319,15 @@
   }
 
   @include media-breakpoint-up(xl) {
-    padding-left: 20px;
-    padding-right: 20px;
-    height: 780px;
-
     form,
     .row {
       height: 100%;
+    }
+
+    .form-subtitle {
+      font-size: 21px;
+      font-weight: 400;
+      line-height: 1.2;
     }
 
     .form-right {

@@ -206,12 +206,11 @@
   @include media-breakpoint-up(lg) {
     padding: 60px 0 0;
     border-bottom: 1px solid $border;
-    margin: 0 0 100px;
+    margin: 0 0 75px;
   }
 
   @include media-breakpoint-up(xl) {
     padding: 60px 0 0;
-    margin: 0 0 160px;
 
     .block-title {
       margin: 0 0 60px;

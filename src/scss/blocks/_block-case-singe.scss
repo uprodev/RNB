@@ -1,5 +1,5 @@
 .block-case-singe {
-  padding: 12px 0 60px;
+  padding: 40px 0;
 
   .case-headline {
     display: flex;
@@ -132,8 +132,6 @@
   }
 
   @include media-breakpoint-up(md) {
-    padding-top: 40px;
-
     .case-headline {
       margin: 0;
       padding: 0;
@@ -150,7 +148,7 @@
   }
 
   @include media-breakpoint-up(xl) {
-    padding-bottom: 160px;
+    padding: 75px 0;
 
     .case-headline {
       h1 {
@@ -198,20 +196,6 @@
       }
       p {
         max-width: 560px;
-      }
-    }
-
-    &--red {
-      padding-bottom: 40px;
-      margin: 0 0 120px;
-    }
-
-    &--blue {
-      padding-bottom: 60px;
-      margin: 0 0 120px;
-
-      &:nth-child(6) {
-        margin: 0 0 160px;
       }
     }
   }

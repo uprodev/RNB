@@ -50,7 +50,7 @@ $grid-breakpoints: (
   md: 768px,
   lg: 1024px,
   xl: 1440px,
-  xxl: 1660px,
+  xxl: 1600px,
 );
 
 $spacer: 1rem;
@@ -66,9 +66,27 @@ $spacers: (
   6: $spacer * 1.875,
   // 30
   7: $spacer * 2.5,
-  8: $spacer * 5,
-  9: $spacer * 6.25,
+  // 40
+  8: $spacer * 2.8125,
+  // 45
+  9: $spacer * 4.6875,
+  //75
+  10: $spacer * 6.25,
   // 100
+  11: $spacer * 9.375,
+  // 150
+);
+
+$gutters: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: 1.4375rem,
+  7: 1.6875rem,
+  8: 5rem,
 );
 
 $btn-transition: all 0.3s ease;
@@ -116,7 +134,7 @@ $form-select-focus-border-color: $input-focus-border-color;
 $form-select-focus-width: $input-focus-width;
 $form-select-focus-box-shadow: none;
 
-$input-padding-y-lg: 1.06rem;
+$input-padding-y-lg: 1.1rem;
 $input-padding-x-lg: 1.2rem;
 $input-font-size-lg: 16px;
 $form-select-bg-size-lg: 12px 8px;

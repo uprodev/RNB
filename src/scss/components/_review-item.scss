@@ -72,13 +72,18 @@
         height: 50px;
       }
     }
+
+    .date {
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
   }
 
   @include media-breakpoint-up(xl) {
-    &:last-child {
-      margin: 0 0 67px;
-    }
     .text {
+      padding-left: 64px;
       p {
         font-size: 22px;
         line-height: 26px;

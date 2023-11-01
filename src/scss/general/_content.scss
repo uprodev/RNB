@@ -48,6 +48,7 @@ body {
 
 .container-fluid {
   --bs-gutter-x: #{$grid-gutter-width-m};
+  max-width: 1376px;
 
   @include media-breakpoint-up(xl) {
     --bs-gutter-x: #{$grid-gutter-width};
