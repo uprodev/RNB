@@ -40,9 +40,12 @@
       font-size: 16px;
       font-weight: 400;
       padding: 0 17px;
+      width: 100%;
+      justify-content: space-between;
+      max-width: 270px;
 
       &:before {
-        right: 74px;
+        right: 50px;
       }
 
       .icon {
@@ -90,6 +93,12 @@
         min-width: 302px;
         justify-content: space-between;
         display: flex;
+        max-width: none;
+        width: auto;
+
+        &:before {
+          right: 65px;
+        }
       }
     }
 
