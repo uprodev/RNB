@@ -8,6 +8,7 @@
       padding: 20px 0;
       text-align: center;
       position: relative;
+      cursor: pointer;
 
       &:after {
         content: "";
@@ -18,9 +19,10 @@
         height: 1px;
         width: 40px;
         background: #dadada;
+        transition: all 1s;
       }
 
-      &:first-child {
+      &.active {
         color: $red1;
       }
 
@@ -39,14 +41,30 @@
     }
   }
 
-  figure {
+  .advantages-image {
     text-align: center;
+    position: relative;
 
-    img {
-      mix-blend-mode: luminosity;
-      display: inline-block;
-      max-width: 100%;
+    svg {
+      display: block;
+      width: 100%;
       height: auto;
+
+      &.img-main {
+        mix-blend-mode: luminosity;
+      }
+
+      &.img-overlay {
+        @include abs;
+      }
+    }
+  }
+
+  .advantages-text {
+    display: none;
+
+    &.active {
+      display: block;
     }
   }
 

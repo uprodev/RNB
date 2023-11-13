@@ -181,13 +181,10 @@
       }
       @-webkit-keyframes rotate {
         0% {
-          -webkit-transform: rotate(0);
-        }
-        50% {
-          -webkit-transform: rotate(-180deg);
+          transform: rotate(0);
         }
         100% {
-          -webkit-transform: rotate(0);
+          transform: rotate(360deg);
         }
       }
     }

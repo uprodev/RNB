@@ -13,7 +13,12 @@
       &:nth-child(2n + 1) {
         .item {
           .tag {
-            background-color: $blue1;
+            &:before {
+              background: linear-gradient(to right, $red1 0%, rgba(0, 68, 170, 0) 100%);
+            }
+            span {
+              background-color: $blue1;
+            }
           }
         }
       }
@@ -21,7 +26,12 @@
       &:nth-child(2n) {
         .item {
           .tag {
-            background-color: $red1;
+            &:before {
+              background: linear-gradient(to right, $blue1 0%, rgba(0, 68, 170, 0) 100%);
+            }
+            span {
+              background-color: $red1;
+            }
           }
         }
       }
@@ -32,9 +42,54 @@
     padding: 20px;
 
     .tag {
-      background-clip: padding-box;
       color: $white;
-      border-color: $gray2;
+      border: none;
+      position: relative;
+      padding: 0;
+      overflow: hidden;
+      background-color: transparent;
+      padding: 3px;
+      height: auto;
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 200%;
+        aspect-ratio: 1/1;
+        border-radius: 30px;
+        transform: translate3d(-50%, -50%, 0) rotate(0deg);
+        -webkit-animation: rotate1 2s linear 0s infinite forwards;
+        animation: rotate1 2s linear 0s infinite forwards;
+        transform-origin: center;
+      }
+
+      span {
+        position: relative;
+        padding: 0 8px 1px;
+        display: inline-flex;
+        align-items: center;
+        border-radius: 30px;
+        height: 26px;
+      }
+
+      @keyframes rotate1 {
+        0% {
+          transform: translate3d(-50%, -50%, 0) rotate(0);
+        }
+        100% {
+          transform: translate3d(-50%, -50%, 0) rotate(360deg);
+        }
+      }
+      @-webkit-keyframes rotate1 {
+        0% {
+          transform: translate3d(-50%, -50%, 0) rotate(0);
+        }
+        100% {
+          transform: translate3d(-50%, -50%, 0) rotate(360deg);
+        }
+      }
     }
   }
 
@@ -54,7 +109,12 @@
         &:nth-child(4) {
           .item {
             .tag {
-              background-color: $blue1;
+              &:before {
+                background: linear-gradient(to right, $red1 0%, rgba(0, 68, 170, 0) 100%);
+              }
+              span {
+                background-color: $blue1;
+              }
             }
           }
         }
@@ -63,7 +123,12 @@
         &:nth-child(3) {
           .item {
             .tag {
-              background-color: $red1;
+              &:before {
+                background: linear-gradient(to right, $blue1 0%, rgba(0, 68, 170, 0) 100%);
+              }
+              span {
+                background-color: $red1;
+              }
             }
           }
         }

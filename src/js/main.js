@@ -313,4 +313,89 @@ jQuery(document).ready(function ($) {
       ease: "none",
     });
   });
+
+  $(".advantages-list .list .text").on("click", function () {
+    var link = $(this);
+    var step = parseInt(link.data("step"));
+    if (!link.hasClass("active")) {
+      $(".advantages-list .list .text.active").removeClass("active");
+      link.addClass("active");
+
+      var textActive = $(".advantages-text.active"),
+        textNext = $(".advantages-text[data-step=" + link.data("step") + "]");
+
+      textActive.fadeOut(0, function () {
+        textActive.removeClass("active");
+      });
+      textNext.fadeIn(400, function () {
+        textNext.addClass("active");
+      });
+
+      gsap.utils.toArray(".motion").forEach(function (path) {
+        if (parseInt(path.dataset.step) !== step) {
+          gsap.to(path, {
+            duration: 1,
+            ease: "power1.inOut",
+            immediateRender: true,
+            fill: "transparent",
+          });
+        } else {
+          gsap.to(path, {
+            duration: 1,
+            ease: "power1.inOut",
+            immediateRender: true,
+            fill: "#D1003F",
+          });
+        }
+      });
+
+      if (step === 4) {
+        gsap.to("#motion4", {
+          duration: 1,
+          ease: "power1.inOut",
+          immediateRender: true,
+          fill: "#fff",
+        });
+      } else {
+        gsap.to("#motion4", {
+          duration: 1,
+          ease: "power1.inOut",
+          immediateRender: true,
+          fill: "transparent",
+        });
+      }
+    }
+  });
+
+  $(".block-activity ul li").each(function () {
+    var ind = $(this).parent().find("li").index($(this)) + 1;
+    if (ind > 5) {
+      ind = ind % 5;
+    }
+    var color = "#0044aa",
+      color1 = "#D2D9E3"; // blue
+    if (ind === 2 || ind === 4) {
+      color = "#d1003f";
+      color1 = "#E7D2D8";
+    }
+    var circle = $("[data-circle=" + ind + "]");
+
+    $(this)
+      .on("mouseenter", function () {
+        gsap.to(circle, {
+          duration: 0.5,
+          ease: "power1.inOut",
+          immediateRender: true,
+          fill: color,
+        });
+      })
+      .on("mouseleave", function () {
+        gsap.to(circle, {
+          duration: 0.5,
+          ease: "power1.inOut",
+          immediateRender: true,
+          fill: color1,
+        });
+      });
+  });
 });
