@@ -1,0 +1,12 @@
+/*   
+Theme Name: RNB Team
+*/
+
+.row p,
+.row li{
+	text-align: justify;
+}
+
+span.pre {
+	    white-space: pre;
+}

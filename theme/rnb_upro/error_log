@@ -1,0 +1,4 @@
+[02-Nov-2023 22:23:32 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/ia1l3salg891/public_html/new.rnb-team.com/wp-content/themes/rnb_upro/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/ia1l3salg891/public_html/new.rnb-team.com/wp-content/themes/rnb_upro/index.php on line 1
