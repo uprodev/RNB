@@ -74,6 +74,16 @@ a {
   & + * {
     margin-top: 0 !important;
   }
+
+  @include media-breakpoint-up(lg) {
+    &.banner-top {
+      img {
+        max-height: 720px;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
 }
 
 .border-top,
